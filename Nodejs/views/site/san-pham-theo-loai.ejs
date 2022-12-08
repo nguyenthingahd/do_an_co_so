@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link href="img/favicon.ico" rel="icon" />
 
-    <title>Fullface Store</title>
+    <title>Laptop Shop</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="eCommerce HTML Template Free Download" name="keywords" />
     <meta content="eCommerce HTML Template Free Download" name="description" />
@@ -34,7 +34,6 @@
   </head>
 
   <body>
-
     <!-- Nav Bar Start -->
     <div class="nav">
       <div class="container-fluid">
@@ -56,26 +55,8 @@
             <div class="navbar-nav mr-auto">
               <a href="/" class="nav-item nav-link active">Trang Chủ</a>
               <a href="/san-pham" class="nav-item nav-link">Sản Phẩm</a>
-              <!-- <a href="product-detail.html" class="nav-item nav-link">Product Detail</a> -->
-              <a href="/gio-hang" class="nav-item nav-link">Giỏ Hàng</a>
               <a href="/thanh-toan" class="nav-item nav-link">Thanh Toán</a>
-              <a href="/users/tai-khoan" class="nav-item nav-link"
-                >Tài khoản của bạn</a
-              >
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                  >Trang khác</a
-                >
-                <div class="dropdown-menu">
-                  <a href="/wishlist" class="dropdown-item"
-                    >Sản phẩm đã thích</a
-                  >
-                  <a href="/lien-he" class="dropdown-item">Liên hệ</a>
-                </div>
-              </div>
+              <a href="/lien-he" class="nav-item nav-link">Liên Hệ</a>
             </div>
             <div class="navbar-nav ml-auto">
               <div class="nav-item dropdown">
@@ -114,7 +95,7 @@
               <button><i class="fa fa-search"></i></button>
             </div>
           </div>
-          <div class="col-md-3">
+          <!-- <div class="col-md-3">
             <div class="user">
               <a href="wishlist.html" class="btn wishlist">
                 <i class="fa fa-heart"></i>
@@ -125,7 +106,7 @@
                 <span>(0)</span>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -135,7 +116,7 @@
     <div class="breadcrumb-wrap">
       <div class="container-fluid">
         <ul class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
           <li class="breadcrumb-item"><a href="/san-pham">Sản phẩm</a></li>
           <li class="breadcrumb-item active"><%=breadcrumb%></li>
         </ul>
@@ -162,46 +143,6 @@
                         <button><i class="fa fa-search"></i></button>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="product-short">
-                        <div class="dropdown">
-                          <div class="dropdown-toggle" data-toggle="dropdown">
-                            Sắp xếp theo
-                          </div>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Mới nhất</a>
-                            <a href="#" class="dropdown-item">Phổ biến</a>
-                            <a href="#" class="dropdown-item">Bán chạy nhất</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="product-price-range">
-                        <div class="dropdown">
-                          <div class="dropdown-toggle" data-toggle="dropdown">
-                            Sắp xếp theo giá
-                          </div>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item"
-                              >0 ₫ - 500.000 ₫</a
-                            >
-                            <a href="#" class="dropdown-item"
-                              >500.000 ₫ - 1.000.000 ₫</a
-                            >
-                            <a href="#" class="dropdown-item"
-                              >1.000.000 ₫ - 2.000.000 ₫</a
-                            >
-                            <a href="#" class="dropdown-item"
-                              >2.000.000 ₫ - 5.000.000 ₫</a
-                            >
-                            <a href="#" class="dropdown-item"
-                              >Trên 5.000.000 ₫</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -211,26 +152,6 @@
                 <div id="myTable" class="row"></div>
               </div>
             </div>
-
-            <!-- Pagination Start -->
-            <div class="col-md-12">
-              <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <!-- Pagination Start -->
           </div>
 
           <!-- Side Bar Start -->
@@ -242,8 +163,7 @@
                   <% for (cat of listCat) { %>
                   <li class="nav-item">
                     <a class="nav-link" href="/danh-muc/<%=cat.nameCat%>"
-                      ><i class="fa fa-motorcycle"></i>Nón Fullface <%=
-                      cat.nameCat %></a
+                      >Laptop <%= cat.nameCat %></a
                     >
                   </li>
                   <% } %>
@@ -252,7 +172,7 @@
             </div>
 
             <div class="sidebar-widget widget-slider">
-              <h3 style="text-align: center; color: #ff6f61">Nón Nổi Bật</h3>
+              <h3 style="text-align: center; color: #ff6f61">Laptop Nổi Bật</h3>
               <div class="sidebar-slider normal-slider">
                 <% for (product of listProPopular) { %>
                 <div class="product-item">
@@ -267,26 +187,19 @@
                     </div>
                   </div>
                   <div class="product-image">
-                    <a href="product-detail.html">
+                    <a href="#">
                       <img
                         src="../<%=product.imgProduct%>"
                         alt="Product Image"
                       />
                     </a>
-                    <div class="product-action">
-                      <a href="#"><i class="fa fa-cart-plus"></i></a>
-                      <a href="#"><i class="fa fa-heart"></i></a>
-                      <a class="slug" href="/san-pham/<%=product.nameProduct%>"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                    </div>
                   </div>
                   <div class="product-price">
                     <h3>
                       <%=product.priceProduct.toLocaleString('vi-VN')%>
                       <span>₫</span>
                     </h3>
-                    <a class="btn" href=""
+                    <a class="btn" href="/thanh-toán"
                       ><i class="fa fa-shopping-cart"></i>Mua Ngay</a
                     >
                   </div>
@@ -298,29 +211,12 @@
             <div class="sidebar-widget brands">
               <h2 class="title">Our Brands</h2>
               <ul>
-                <li><a href="#">Nulla </a><span>(45)</span></li>
-                <li><a href="#">Curabitur </a><span>(34)</span></li>
-                <li><a href="#">Nunc </a><span>(67)</span></li>
-                <li><a href="#">Ullamcorper</a><span>(74)</span></li>
-                <li><a href="#">Fusce </a><span>(89)</span></li>
-                <li><a href="#">Sagittis</a><span>(28)</span></li>
+                <li><a href="#">HP </a><span>(45)</span></li>
+                <li><a href="#">MACBOOK </a><span>(34)</span></li>
+                <li><a href="#">DELL </a><span>(67)</span></li>
+                <li><a href="#">ACER</a><span>(74)</span></li>
+                <li><a href="#">ASUS </a><span>(89)</span></li>
               </ul>
-            </div>
-
-            <div class="sidebar-widget tag">
-              <h2 class="title">Tags Cloud</h2>
-              <a href="#">Lorem ipsum</a>
-              <a href="#">Vivamus</a>
-              <a href="#">Phasellus</a>
-              <a href="#">pulvinar</a>
-              <a href="#">Curabitur</a>
-              <a href="#">Fusce</a>
-              <a href="#">Sem quis</a>
-              <a href="#">Mollis metus</a>
-              <a href="#">Sit amet</a>
-              <a href="#">Vel posuere</a>
-              <a href="#">orci luctus</a>
-              <a href="#">Nam lorem</a>
             </div>
           </div>
           <!-- Side Bar End -->
@@ -425,27 +321,9 @@
             </div>
           </div>
         </div>
-
-        <div class="row payment align-items-center">
-          <div class="col-md-6">
-            <div class="payment-method">
-              <h2>Nhận thanh toán bằng:</h2>
-              <img src="../img/payment-method.png" alt="Payment Method" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="payment-security">
-              <h2>Chứng chỉ bảo mật:</h2>
-              <img src="../img/godaddy.svg" alt="Payment Security" />
-              <img src="../img/norton.svg" alt="Payment Security" />
-              <img src="../img/ssl.svg" alt="Payment Security" />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -493,18 +371,14 @@
                             }" alt="Product Image" width="100%">
                         </a>
                         <div class="product-action">
-                            <a href="#"><i class="fa fa-cart-plus"></i></a>
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="/san-pham/${
-                              product.nameProduct
-                            }"><i class="fa fa-search"></i></a>
+                            <a href="/san-pham/${product.nameProduct}"></a>
                         </div>
                     </div>
                     <div class="product-price">
                         <h3>${product.priceProduct.toLocaleString(
                           "vi-VN"
                         )}<span> ₫</span></h3>
-                        <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Mua Ngay</a>
+                        <a class="btn" href="/thanh-toan">Mua Ngay</a>
                     </div>
                 </div>
             </div>`;

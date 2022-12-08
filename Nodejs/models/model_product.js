@@ -149,22 +149,3 @@ function replaceNameProduct(nameProduct) {
   var newNameProduct = xoa_dau(nameProduct);
   return newNameProduct;
 }
-
-exports.createComment = (data) => {
-  console.log(data);
-  return new Promise((resolve, reject) => {
-    let sql = "INSERT INTO comment SET ?";
-    db.query(sql, data, (err, d) => {
-      console.log("Insert successfully");
-      resolve(d);
-    });
-  });
-};
-exports.getComment = (idProduct) => {
-  return new Promise((resolve, reject) => {
-    let sql = `SELECT * FROM laptop_shop.comment WHERE idProduct=${idProduct}`;
-    db.query(sql, (err, d) => {
-      resolve(d);
-    });
-  });
-};
