@@ -1,28 +1,29 @@
 <% for (product of listPro) { %>
-    <div class="col-md-4">
-        <div class="product-item">
-            <div class="product-title">
-                <a class="slug" href="/san-pham/<%=product.nameProduct%>"><%=product.nameProduct%></a>
-                <div class="ratting">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </div>
-            </div>
-            <div class="product-image">
-                <a href="#">
-                    <img src="../<%=product.imgProduct%>" alt="Product Image">
-                </a>
-                <div class="product-action">
-                    <a class="slug" href="/san-pham/<%=product.nameProduct%>"><i class="fa fa-search"></i></a>
-                </div>
-            </div>
-            <div class="product-price">
-                <h3><%=product.priceProduct.toLocaleString('vi-VN')%><span> ₫</span></h3>
-                <a class="btn" href="/thanh-toan"><i class="fa fa-shopping-cart"></i>Mua Ngay</a>
-            </div>
-        </div>
+<div class="col-md-4">
+  <div class="product-item">
+    <div class="product-title">
+      <a class="slug" href="/san-pham/<%=product.nameProduct%>"
+        ><%=product.nameProduct%></a
+      >
+      <div class="ratting">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
     </div>
+    <div class="product-image">
+      <a href="#">
+        <img src="../<%=product.imgProduct%>" alt="Product Image" />
+      </a>
+    </div>
+    <div class="product-price" style="font-size: 10px; padding: 15px 5px">
+      <h3><%=product.priceProduct.toLocaleString('vi-VN')%><span> ₫</span></h3>
+      <a class="btn" href="/thanh-toan"
+        ><i class="fa fa-shopping-cart"></i>Mua Ngay</a
+      >
+    </div>
+  </div>
+</div>
 <% } %>
